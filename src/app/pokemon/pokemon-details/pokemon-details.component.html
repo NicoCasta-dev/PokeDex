@@ -1,0 +1,15 @@
+<div class="container">
+    @if (pokemon) {
+        <div class="row">
+            <div class="col-md-6">
+                <img [src]="pokemon.sprites.front_default" alt="Pokémon {{pokemon.name}}">
+            </div>
+            <div class="col-md-6">
+                <h1>{{pokemon.name}}</h1>
+                <p>Type: {{pokemon.types[0].type.name}}</p>
+                <p>Poids: {{pokemon.weight}}</p>
+                <p>Taille: {{pokemon.height}}</p>
+            </div>
+        </div>
+    }
+</div>

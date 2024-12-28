@@ -1,0 +1,147 @@
+// pokemon-details.component.scss
+
+.container {
+    padding: 2rem;
+    margin: 2rem auto;
+    max-width: 900px;
+  }
+  
+  .row {
+    background: white;
+    border-radius: 1.5rem;
+    padding: 2rem;
+    position: relative;
+    transition: all 0.3s ease;
+    border: 3px solid #f44336;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  
+    &:hover {
+      box-shadow: 0 6px 20px rgba(244, 67, 54, 0.15);
+    }
+  }
+  
+  .col-md-6 {
+    padding: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  
+    // Colonne avec l'image
+    &:first-child {
+      align-items: center;
+      
+      img {
+        width: 100%;
+        max-width: 300px;
+        height: auto;
+        transition: transform 0.3s ease;
+        
+        &:hover {
+          transform: scale(1.05);
+        }
+      }
+    }
+  
+    // Colonne avec les informations
+    &:last-child {
+      h1 {
+        color: #f44336;
+        font-size: 2.5rem;
+        font-weight: 600;
+        margin-bottom: 1.5rem;
+        text-transform: capitalize;
+      }
+  
+      p {
+        font-size: 1.2rem;
+        margin: 0.8rem 0;
+        padding: 0.8rem 1.2rem;
+        border-radius: 0.8rem;
+        transition: transform 0.2s ease;
+        
+        &:hover {
+          transform: translateX(5px);
+        }
+        
+        &:nth-child(2) { // Nom du Pokémon
+          color: #1a1a1a;
+          font-weight: 600;
+          font-size: 1.8rem;
+          text-transform: capitalize;
+          background: transparent;
+          padding-left: 0;
+        }
+        
+        &:nth-child(3) { // Type
+          background: #f44336;
+          color: white;
+          display: inline-block;
+        }
+        
+        &:nth-child(4) { // Poids
+          background: #4CAF50;
+          color: white;
+          display: inline-block;
+          margin-right: 1rem;
+        }
+        
+        &:nth-child(5) { // Taille
+          background: #03A9F4;
+          color: white;
+          display: inline-block;
+        }
+      }
+    }
+  }
+  
+  // Media Query
+  @media (max-width: 768px) {
+    .container {
+      padding: 1rem;
+    }
+  
+    .row {
+      flex-direction: column;
+      padding: 1rem;
+    }
+    
+    .col-md-6 {
+      padding: 1rem;
+      
+      &:first-child {
+        img {
+          max-width: 250px;
+          margin-bottom: 1rem;
+        }
+      }
+      
+      &:last-child {
+        text-align: center;
+        
+        p {
+          display: block;
+          margin: 0.8rem auto;
+          
+          &:hover {
+            transform: translateX(0) translateY(-3px);
+          }
+        }
+      }
+    }
+  }
+  
+  // Animation d'entrée simple
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(10px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  .row {
+    animation: fadeIn 0.4s ease-out;
+  }

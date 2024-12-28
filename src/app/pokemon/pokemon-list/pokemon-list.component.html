@@ -1,0 +1,25 @@
+<div class="row row-cols-1 row-cols-md-3 g-4">
+    @for (pokemon of pokemons; track $index) {
+        <div class="col">
+            <div class="card h-100 text-center" [routerLink]="['/pokemon', pokemon.id]" style="cursor: pointer;">
+                <img [src]="pokemon.sprites.front_default" alt="Pokémon {{pokemon.name}}"> 
+                <div class="card-body">
+                    <h2 class="card-title">{{pokemon.name}}</h2>
+                </div>
+            </div>
+        </div>
+    }
+</div>
+<nav aria-label="Page navigation example">
+    <ul class="pagination">
+        <li class="page-item">
+            <a class="page-link" (click)="currentPage = currentPage - 1">«</a>
+        </li>
+        <li class="page-item"><a class="page-link" (click)="currentPage = 1">1</a></li>
+        <li class="page-item"><a class="page-link" (click)="currentPage = 2">2</a></li>
+        <li class="page-item"><a class="page-link" (click)="currentPage = 3">3</a></li>
+        <li class="page-item">
+            <a class="page-link" (click)="currentPage = currentPage + 1">»</a>
+        </li>
+    </ul>
+</nav>
