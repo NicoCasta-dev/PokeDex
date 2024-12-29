@@ -47,4 +47,8 @@ export class PokemonListComponent {
     const start = (this.currentPage - 1) * this.pokemonParPage;
     return this.filteredPokemons.slice(start, start + this.pokemonParPage);
   }
+
+  getSvgUrl(id: number): string {
+    return `https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/${id}.svg`;
+  }
 }
