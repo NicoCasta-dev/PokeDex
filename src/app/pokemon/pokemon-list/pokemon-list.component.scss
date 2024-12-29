@@ -42,6 +42,10 @@
       -webkit-mask: 
         linear-gradient(#fff 0 0) content-box, 
         linear-gradient(#fff 0 0);
+      mask:
+        linear-gradient(#fff 0 0) content-box, 
+        linear-gradient(#fff 0 0);
+        mask-composite: exclude;
       -webkit-mask-composite: xor;
       mask-composite: exclude;
       background-size: 200% 200%;

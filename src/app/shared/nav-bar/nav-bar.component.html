@@ -3,8 +3,16 @@
         <a routerLink="/pokemon">
             <img src="assets/images/pokemon-23.svg" alt="Logo Pokémon" class="img">
         </a>        
-        <form class="d-flex" role="search">
-            <input class="form-control search-bar me-2" type="search" placeholder="Recherche" aria-label="Search">
+        <form class="d-flex" role="search" (submit)="$event.preventDefault()">
+            <input class="form-control search-bar me-2" 
+                   type="search" 
+                   placeholder="Recherche" 
+                   [(ngModel)]="searchTerm"
+                   name="search"
+                   (input)="onSearch()">
         </form>
     </div>
 </nav>
+
+<!-- Ligne 10 lie la valeur de l'input à searchTerm -->
+<!-- Ligne 12 déclenche la fonction onSearch() lorsque l'utilisateur tape dans l'input -->

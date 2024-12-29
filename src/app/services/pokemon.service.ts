@@ -1,6 +1,6 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { Observable, switchMap, map, forkJoin } from 'rxjs';
+import { Observable, switchMap, map, forkJoin, BehaviorSubject } from 'rxjs';
 import { Pokemon } from '../models/pokemon';
 
 // L'interface Pokemon (que vous avez déjà) : décrit la structure d'UN Pokémon avec tous ses détails
