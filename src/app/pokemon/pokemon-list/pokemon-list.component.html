@@ -2,7 +2,7 @@
     @for (pokemon of getPage(); track pokemon.id) {
         <div class="col">
             <div class="card h-100 text-center" [routerLink]="['/pokemon', pokemon.id]" style="cursor: pointer;">
-                <img [src]="getSvgUrl(pokemon.id)" alt="Pokémon {{pokemon.name}}">
+                <img [src]="getSvgUrl(pokemon.id)" alt="Pokémon {{pokemon.frenchName}}">
                 <div class="card-body">
                     <h2 class="card-title">{{pokemon.frenchName}}</h2>
                 </div>
