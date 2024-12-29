@@ -3,10 +3,6 @@ import { Injectable } from '@angular/core';
 import { Observable, switchMap, map, forkJoin, BehaviorSubject } from 'rxjs';
 import { Pokemon } from '../models/pokemon';
 
-// L'interface Pokemon (que vous avez déjà) : décrit la structure d'UN Pokémon avec tous ses détails
-// L'interface PokemonListResponse : décrit la structure de la PREMIÈRE réponse de l'API quand on fait pokemon?offset=0&limit=151
-// L'interface PokemonResult : décrit la structure de la RESPONSE de l'API quand on fait pokemon?offset=0&limit=151
-
 interface PokemonResult {
   name: string;
   url: string;

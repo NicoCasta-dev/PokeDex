@@ -37,4 +37,29 @@ export class PokemonDetailsComponent {
   getSvgUrl(id: number): string {
     return `https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/${id}.svg`;
   }
+
+  typeTranslations: { [key: string]: string } = {
+    'normal': 'Normal',
+    'fire': 'Feu',
+    'water': 'Eau',
+    'electric': 'Électrik',
+    'grass': 'Plante',
+    'ice': 'Glace',
+    'fighting': 'Combat',
+    'poison': 'Poison',
+    'ground': 'Sol',
+    'flying': 'Vol',
+    'psychic': 'Psy',
+    'bug': 'Insecte',
+    'rock': 'Roche',
+    'ghost': 'Spectre',
+    'dragon': 'Dragon',
+    'dark': 'Ténèbres',
+    'steel': 'Acier',
+    'fairy': 'Fée'
+  };
+
+  getTypeInFrench(type: string): string {
+    return this.typeTranslations[type] || type;
+  }
 }
