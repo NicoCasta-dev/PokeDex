@@ -12,7 +12,8 @@ export class PokemonListComponent {
   loading = true;
   error = false;
   currentPage = 1;
-  pokemonParPage = 9;
+  pokemonParPage = 20;
+  Math = Math;
 
   constructor(private pokemonService: PokemonService) { }
 
