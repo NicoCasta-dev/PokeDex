@@ -2,6 +2,8 @@ export interface Pokemon {
     id: number;
     name: string;
     frenchName: string;
+    weight: number;
+    height: number;
     sprites: {
         front_default: string;
     };
@@ -10,8 +12,6 @@ export interface Pokemon {
             name: string;
         }
     }[];
-    weight: number;
-    height: number;
     stats: {
         base_stat: number;
     }
